@@ -1,5 +1,7 @@
 # D-FLIPDLOP-NEGEDGE
 
+Developed by:AADHITHAN B RegisterNumber: 212224040001
+
 **AIM:**
 
 To implement  D flipflop using verilog and validating their functionality using their functional tables
