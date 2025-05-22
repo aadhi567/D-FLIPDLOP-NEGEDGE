@@ -47,15 +47,12 @@ Check for Race Conditions: Ensure that there are no race conditions or undefined
 **PROGRAM**
 
 ```
-Program for flipflops and verify its truth table in quartus using Verilog programming.
-Developed by: PYNAM VINODH
-RegisterNumber: 212223240131
+
 
 module Dflipflop(D,Clock,Q,Qbar);
 input D,Clock;
 output reg Q,Qbar;
-always @ (negedge Clock)// use negative edge clock for triggereing condition 
-//compute D flipflop logic here
+always @ (negedge Clock)
 begin
  	Q=D;
 Qbar=~D;
