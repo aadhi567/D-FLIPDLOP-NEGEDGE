@@ -49,15 +49,18 @@ Check for Race Conditions: Ensure that there are no race conditions or undefined
 ```
 
 
-module Dflipflop(D,Clock,Q,Qbar);
-input D,Clock;
-output reg Q,Qbar;
-always @ (negedge Clock)
-begin
- 	Q=D;
-Qbar=~D;
-end
- endmodule
+module d_ff_neg_edge (d, clk, rst, q);
+  input d, clk, rst;
+  output reg q;
+
+  always @(negedge clk or posedge rst) begin
+    if (rst)
+      q <= 0;
+    else
+      q <= d;
+  end
+endmodule
+
 ```
 
 **RTL LOGIC FOR FLIPFLOPS**
